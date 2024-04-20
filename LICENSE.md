@@ -1,3 +1,6 @@
+# MIT License
+
+Copyright (c) 2024 Marc Redwerkz <https://github.com/rdwz>
 Copyright (c) 2022 Giuseppe La Torre <https://github.com/giuseppelt>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

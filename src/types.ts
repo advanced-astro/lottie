@@ -1,48 +1,59 @@
-import type { AnimationItem } from "lottie-web";
+import type { AnimationItem } from 'lottie-web'
 
-
-export interface LottieAnimationConfig {
-    id?: string
-    src: string
-    player?: "light" | "full"
-    loop?: boolean
-    autoplay?: boolean | "visible"
-    visibleThreshold?: number
+export interface LottieConfig {
+	id?: string
+	src: string
+	player?: 'light' | 'full'
+	loop?: boolean
+	autoplay?: boolean | 'visible'
+	visibleThreshold?: number
 }
 
-export type LottieAnimation = Readonly<{
-    id: string
-    config: LottieAnimationConfig
-    container: HTMLElement
-} & (
-        | {
-            isLoaded: true
-            player: AnimationItem
-        }
-        | {
-            isLoaded: false
-            player: undefined
-        }
-    )>
+export type Lottie = Readonly<
+	{
+		id: string
+		config: LottieConfig
+		container: HTMLElement
+	} & (
+		| {
+				isLoaded: true
+				player: AnimationItem
+		  }
+		| {
+				isLoaded: false
+				player: undefined
+		  }
+	)
+>
 
 export type AstroLottie = {
-    /**
-     * Get a LottieAnimation by the configured id
-     */
-    getAnimation(id: string): LottieAnimation | undefined
+	/**
+	 * Get an animation by the configured id
+	 */
+	getAnimation(id: string): Lottie | undefined
 
-    /**
-     * Get a LottieAnimation from the hosting element container
-     */
-    getAnimation(from: { container: HTMLElement }): LottieAnimation | undefined
+	/**
+	 * Get an animation from the hosting element container
+	 */
+	getAnimation(from: { container: HTMLElement }): Lottie | undefined
 
-    /**
-     * Get a LottieAnimation from the hosting element container
-     */
-    getAnimation(from: { elementId: string }): LottieAnimation | undefined
+	/**
+	 * Get an animation from the hosting element container
+	 */
+	getAnimation(from: { elementId: string }): Lottie | undefined
 
-    /**
-     * Get all the LottieAnimation for the current page
-     */
-    getAllAnimations(): LottieAnimation[]
+	/**
+	 * Get all animation for the current page
+	 */
+	getAllAnimations(): Lottie[]
+
+	// /**
+	//  * Get the current player mode
+	//  */
+	// getPlayerMode(): 'light' | 'full'
+
+	// /**
+	//  * Get the current observer
+	//  */
+	// getObserver(): IntersectionObserver | undefined
 }

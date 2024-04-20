@@ -1,9 +1,9 @@
 ---
-import type { LottieAnimationConfig } from "./dist/index";
+import type { LottieConfig } from './dist/index'
 
-export interface Props extends LottieAnimationConfig {}
+export interface Props extends LottieConfig {}
 
-const { ...lottieData } = Astro.props;
+const { ...lottieData } = Astro.props
 ---
 
 <div data-lottie data-lottie-data={JSON.stringify(lottieData)}></div>

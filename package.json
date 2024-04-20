@@ -1,41 +1,48 @@
 {
-  "name": "astro-integration-lottie",
-  "version": "0.2.3",
-  "description": "Use Lottie animations within your Astro website",
-  "type": "module",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "build": "tsc"
-  },
+  "name": "@advanced-astro/lottie",
+  "version": "0.2.0",
+  "description": "The next level 🔥 experience of Astro 🚀 in a frenzy of Lottie wizardry 🪄",
   "keywords": [
     "astro",
     "astro-integration",
     "astro-component",
     "lottie"
   ],
+  "homepage": "https://github.com/advanced-astro/lottie#readme.md",
+  "bugs": "https://github.com/advanced-astro/lottie/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/advanced-astro/lottie.git"
+  },
+  "license": "MIT",
   "author": {
     "name": "Giuseppe La Torre",
     "url": "https://github.com/giuseppelt"
   },
-  "license": "MIT",
-  "homepage": "https://github.com/giuseppelt/astro-lottie#readme.md",
-  "bugs": "https://github.com/giuseppelt/astro-lottie/issues",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/giuseppelt/astro-lottie.git"
-  },
+  "contributors": [
+    {
+      "name": "Marc Redwerkz",
+      "url": "https://github.com/rdwz"
+    }
+  ],
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "env.d.ts",
     "package.json",
     "Lottie.astro"
   ],
+  "scripts": {
+    "build": "tsc",
+    "build:tsup": "tsup"
+  },
   "devDependencies": {
-    "@types/node": "^16.18.12",
-    "astro": "^2.0.16",
-    "lottie-web": "^5.10.2",
-    "typescript": "^5.0.4"
+    "@types/node": "^20.12.7",
+    "astro": "^4.6.3",
+    "lottie-web": "^5.12.2",
+    "typescript": "^5.4.5"
   },
   "peerDependencies": {
     "lottie-web": "^5.10.0"
