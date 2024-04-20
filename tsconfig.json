@@ -1,17 +1,17 @@
 {
-    "compilerOptions": {
-        "outDir": "dist",
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "moduleResolution": "node",
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "module": "es2020",
-        "target": "es2020",
-        "declaration": true
-    },
-    "include": [
+	"compilerOptions": {
+		"outDir": "dist",
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "Node",
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"module": "ESNext",
+		"target": "ESNext",
+		"declaration": true
+	},
+	"include": [
         "src"
-    ]
+	]
 }
